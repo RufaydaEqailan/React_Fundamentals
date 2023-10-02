@@ -16,7 +16,7 @@ const data = [
   { title: "title4", description: "description4", img: img4 },
 ];
 const App = () => {
-  const printTile = () => {
+  const printPromise = () => {
     let myPromise = new Promise((success, error) => {
       const x = 0;
       if (x === 0) {
@@ -40,7 +40,7 @@ const App = () => {
             title={item.title}
             description={item.description}
             img={item.img}
-            clickMe={printTile}
+            clickMe={printPromise}
           >
             <h1>hello</h1>
           </Carddetalies>
