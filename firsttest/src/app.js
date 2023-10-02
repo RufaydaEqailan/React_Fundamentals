@@ -16,8 +16,19 @@ const data = [
   { title: "title4", description: "description4", img: img4 },
 ];
 const App = () => {
-  const printTile = (message) => {
-    console.log("This is From App" + message);
+  const printTile = () => {
+    let myPromise = new Promise((success, error) => {
+      const x = 0;
+      if (x === 0) {
+        success("This is ok");
+      } else {
+        error("This is fail");
+      }
+    });
+    myPromise.then(
+      (resolve) => console.log(resolve),
+      (rejected) => console.log(rejected)
+    );
   };
   return (
     <div>
