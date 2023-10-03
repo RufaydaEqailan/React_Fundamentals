@@ -1,7 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
+// Without Destrcuring
 // const CardDetails = (props) => {
+// Destrcuring, extract children
 const CardDetails = ({ title, img, description, clickMe, children }) => {
   //   const handelClick = () => console.log(props.title);
   const handelClick = () => clickMe(title);
