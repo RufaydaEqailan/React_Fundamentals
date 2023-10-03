@@ -1,8 +1,7 @@
-import "../src/css/styleHeader.css";
+import React from "react";
 
 const Header = () => {
-  const name = "Rufayda";
-  //   return <div className="headerColor">Header</div>;
-  return <div style={{ color: "white", backgroundColor: "green" }}>{name}</div>;
+  return <div>This is header</div>;
 };
+
 export default Header;
