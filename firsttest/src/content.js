@@ -1,15 +1,17 @@
-import { Button, Image } from "react-bootstrap";
 import React from "react";
-import img1 from "./images/img1.jpg";
+import CardDetails from "./component/card";
 
+const title1 = "this is title 1";
+const title2 = "this is title 2";
+const title3 = "this is title 3";
+const title4 = "this is title 4";
 const Content = () => {
   return (
-    <div className="style1">
-      This is content
-      <Button variant="primary" className="btn btn-danger">
-        click me
-      </Button>{" "}
-      <Image src={img1} rounded />
+    <div>
+      <CardDetails title={title1} />
+      <CardDetails title={title2} />
+      <CardDetails title={title3} />
+      <CardDetails title={title4} />
     </div>
   );
 };
