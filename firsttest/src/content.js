@@ -35,7 +35,9 @@ const Content = () => {
         img={item.img}
         key={index}
         clickMe={printTitle}
-      />
+      >
+        <h3>Hello form children</h3>
+      </CardDetails>
     );
   });
 };

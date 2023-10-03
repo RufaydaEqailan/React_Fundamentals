@@ -1,15 +1,17 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CardDetails = (props) => {
+// const CardDetails = (props) => {
+const CardDetails = ({ title, img, description, clickMe, children }) => {
   //   const handelClick = () => console.log(props.title);
-  const handelClick = () => props.clickMe(props.title);
+  const handelClick = () => clickMe(title);
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={props.img} />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text>{props.description}</Card.Text>
+        {children}
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{description}</Card.Text>
         <Button variant="primary" onClick={handelClick}>
           Go somewhere
         </Button>
