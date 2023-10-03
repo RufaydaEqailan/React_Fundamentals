@@ -25,6 +25,7 @@ const data = [
   { title: "title3", description: "desc3", img: img3 },
   { title: "title4", description: "desc4", img: img4 },
 ];
+const printTitle = (message) => console.log("this message from " + message);
 const Content = () => {
   return data.map((item, index) => {
     return (
@@ -33,6 +34,7 @@ const Content = () => {
         description={item.description}
         img={item.img}
         key={index}
+        clickMe={printTitle}
       />
     );
   });
