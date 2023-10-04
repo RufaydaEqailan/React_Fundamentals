@@ -22,10 +22,10 @@ import NotFound from "./component/notFound";
 //   );
 // };
 const data = [
-  // { title: "title1", description: "desc1", img: img1 },
-  // { title: "title2", description: "desc2", img: img2 },
-  // { title: "title3", description: "desc3", img: img3 },
-  // { title: "title4", description: "desc4", img: img4 },
+  { title: "title1", description: "desc1", img: img1 },
+  { title: "title2", description: "desc2", img: img2 },
+  { title: "title3", description: "desc3", img: img3 },
+  { title: "title4", description: "desc4", img: img4 },
 ];
 const printTitle = (message) => console.log("this message from " + message);
 const Content = () => {
@@ -44,9 +44,7 @@ const Content = () => {
       );
     })
   ) : (
-    <NotFound msg={"There is no data cards found !"} color={"info"} >
-    
-    </NotFound>
+    <NotFound msg={"There is no data cards found !"} color={"info"}></NotFound>
   );
 };
 
