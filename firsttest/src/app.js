@@ -21,7 +21,7 @@ const app = () => {
   return (
     <div>
       <UseEffectExample />
-      // <UseRefExample />
+       <UseRefExample />
       <BrowserRouter>
         <Routes>
           <Route path="/Header" element={<Header />} />
