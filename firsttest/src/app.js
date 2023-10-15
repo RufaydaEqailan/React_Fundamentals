@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "./header";
 import Content from "./content";
 import Footer from "./footer";
@@ -13,15 +13,16 @@ import UseStateLarsh from "./HooksExample/useStateLarsh";
 import StateCount from "./HooksExample/stateCount";
 import UseEffectExample from "./HooksExample/useEffectExample";
 import UseRefExample from "./HooksExample/useRefExample";
+import { ColorContext } from "./HooksExample/useContextExample";
 
 const ShowFooter = () => {
   if (window.location.pathname === "/Footer") return <Footer />;
 };
-const app = () => {
+const App = () => {
+  const data = useContext(ColorContext);
   return (
     <div>
-      <UseEffectExample />
-       <UseRefExample />
+      {data}
       <BrowserRouter>
         <Routes>
           <Route path="/Header" element={<Header />} />
@@ -33,6 +34,8 @@ const app = () => {
           <Route path="/text" element={<UseStateText />} />
           <Route path="/larsh" element={<UseStateLarsh />} />
           <Route path="/count" element={<StateCount />} />
+          <Route path="/ref" element={<UseRefExample />} />
+          <Route path="/effect" element={<UseEffectExample />} />
         </Routes>
       </BrowserRouter>
       {ShowFooter()}
@@ -40,4 +43,4 @@ const app = () => {
   );
 };
 
-export default app;
+export default App;
