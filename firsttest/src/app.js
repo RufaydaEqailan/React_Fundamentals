@@ -11,6 +11,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UseStateText from "./HooksExample/useStateText";
 import UseStateLarsh from "./HooksExample/useStateLarsh";
 import StateCount from "./HooksExample/stateCount";
+import UseEffectExample from "./HooksExample/useEffectExample";
+import UseRefExample from "./HooksExample/useRefExample";
 
 const ShowFooter = () => {
   if (window.location.pathname === "/Footer") return <Footer />;
@@ -18,6 +20,8 @@ const ShowFooter = () => {
 const app = () => {
   return (
     <div>
+      <UseEffectExample />
+      // <UseRefExample />
       <BrowserRouter>
         <Routes>
           <Route path="/Header" element={<Header />} />
