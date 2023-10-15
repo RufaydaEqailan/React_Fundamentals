@@ -19,10 +19,13 @@ const ShowFooter = () => {
   if (window.location.pathname === "/Footer") return <Footer />;
 };
 const App = () => {
-  const data = useContext(ColorContext);
+  //5-useContext
+  const { data, changeData } = useContext(ColorContext);
   return (
     <div>
-      {data}
+      <UseRefExample />
+      {data.name}
+      {data.id}
       <BrowserRouter>
         <Routes>
           <Route path="/Header" element={<Header />} />
