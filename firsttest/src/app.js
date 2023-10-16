@@ -16,6 +16,7 @@ import UseRefExample from "./HooksExample/useRefExample";
 import { ColorContext } from "./HooksExample/useContextExample";
 import UseMemoExample from "./HooksExample/useMemoExample";
 import UseReducerExample from "./HooksExample/useReducerExample";
+import UseCustomeExample from "./HooksExample/useCustomeExample";
 
 const ShowFooter = () => {
   if (window.location.pathname === "/Footer") return <Footer />;
@@ -25,7 +26,7 @@ const App = () => {
   const { data, changeData } = useContext(ColorContext);
   return (
     <div>
-    <UseReducerExample/>
+      <UseCustomeExample />
       <BrowserRouter>
         <Routes>
           <Route path="/Header" element={<Header />} />
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/memo" element={<UseMemoExample />} />
           {/*data.name*/}
           {/*data.id*/}
+          <Route path="/reducer" element={<UseReducerExample />} />
         </Routes>
       </BrowserRouter>
       {ShowFooter()}
